@@ -23,7 +23,7 @@ import java.util.logging.Logger;
 public class Register extends javax.swing.JFrame {
     
     Database data = new Database();
-    Connection con;
+    Prinsipal prinsipal =new Prinsipal();
     private static final String driver = "com.mysql.cj.jdbc.Driver";
     private static final String user = "kakarotto639";
     private static final String pass = "kakarotto639";
@@ -302,12 +302,15 @@ public class Register extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(TextPass.getText().contentEquals(TextConPass.getText())){
             try {
-            con = DriverManager.getConnection(url, user, pass);
+            Connection con = DriverManager.getConnection(url, user, pass);
             Statement stmt = con.createStatement();
-            stmt.execute("INSERT INTO usuarios VALUES('1234','Cesar','Administrador','123456','M','2002-12-11')");
+            stmt.execute("INSERT INTO usuarios VALUES('"+TextCedu.getText()+"','"+TextNombre.getText()+"','"+SelCargo.getItemAt(WIDTH)+"','"+TextPass.getText()+"','M','2000-05-05')");
         } catch (SQLException ex) {
             Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
         }
+            prinsipal.setLocationRelativeTo(null);
+            prinsipal.setVisible(true);
+            this.dispose();
         }else{
         AvisPass.setText("Las contraseñas no coinsiden");}
     }//GEN-LAST:event_jButton1ActionPerformed
