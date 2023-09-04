@@ -1,4 +1,3 @@
-
 package gui;
 
 import java.sql.ResultSet;
@@ -12,6 +11,7 @@ import java.util.logging.Logger;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -29,6 +29,7 @@ public class Login extends javax.swing.JFrame {
 
     public Login() {
         initComponents();
+        this.setExtendedState(MAXIMIZED_BOTH);
         IncorrectCC.setText("");
         InputPss.setText("");
         try {
@@ -233,7 +234,7 @@ public class Login extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(279, 279, 279)
                         .addComponent(BtnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(121, Short.MAX_VALUE))
+                .addContainerGap(1243, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -287,7 +288,7 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(jLabel10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BtnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addContainerGap(611, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -319,6 +320,7 @@ public class Login extends javax.swing.JFrame {
     private void BtnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAtrasActionPerformed
         PantallaIni1 inicio1 = new PantallaIni1();
         inicio1.setVisible(true);
+        inicio1.setExtendedState(MAXIMIZED_BOTH);
         inicio1.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_BtnAtrasActionPerformed
@@ -330,35 +332,46 @@ public class Login extends javax.swing.JFrame {
     private void BtnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnLoginActionPerformed
         try {
             // TODO add your handling code here:
-            con = DriverManager.getConnection(url, user, pass);
-            Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM usuarios WHERE Cedula="+InputCC.getText());
-            
-            
-            rs.first();
-            
-
-            do {
-                String [] CC = {rs.getString(1),rs.getString(4)};
-                
-                if (InputCC.getText().contentEquals(CC [0])) {
-                    if (InputPss.getText().contentEquals(CC [1])) {
+            boolean t=false;
+            IncorrectCC.setText("");
+            IncorrectPass.setText("");
+            if (InputCC.getText().equals(IncorrectCC.getText())) {
+                IncorrectCC.setText("debe llenar todos los campos");
+            } else {
+                con = DriverManager.getConnection(url, user, pass);
+                Statement stmt = con.createStatement();
+                if (InputPss.getText().equals(IncorrectPass.getText())) {
+                    IncorrectPass.setText("debe llenar todos los campos");
+                } else {
+                    ResultSet rs = stmt.executeQuery("select * from usuarios where Cedula=" + InputCC.getText());
+                    while (rs.next()) {
+                        if (rs.getString("contrasenia").equals(InputPss.getText())) {
+                            prinsipal.setExtendedState(MAXIMIZED_BOTH);
                             prinsipal.setLocationRelativeTo(null);
                             prinsipal.setVisible(true);
                             this.dispose();
-                    } else {
-                        IncorrectPass.setText("La contraseña es incorrecta");
-                        InputPss.setText("");
+                            t=true;
+                        } else {
+                            IncorrectPass.setText("la contraseña no es correcta");
+                            InputPss.setText("");
+                            t=true;
                         }
-                } else {
+                    }
+                    if(t==false){
+                    IncorrectCC.setText("el usuario no esta registrado");
+                    InputCC.setText("");
+                    InputPss.setText("");
+                    
+                    }
+                    rs.close();
+                    stmt.close();
+                    
                 }
-            } while (rs .next());
-            IncorrectCC.setText("este usuario no esta registrado");
-            InputPss.setText("");
+            }
         } catch (SQLException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
-            
+
     }//GEN-LAST:event_BtnLoginActionPerformed
 
     private void setImageLabel(JLabel LabelName, String root) {

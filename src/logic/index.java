@@ -5,6 +5,7 @@ import gui.Login;
 import gui.PantallaIni1;
 import gui.Register;
 import gui.Intro;
+import static java.awt.Frame.MAXIMIZED_BOTH;
 import java.util.Timer;
 import java.util.TimerTask;
 //@author kakar
@@ -24,6 +25,7 @@ public class index {
         TimerTask iniciar = new TimerTask(){
             @Override
             public void run (){
+                inicio1.setExtendedState(MAXIMIZED_BOTH);
                 inicio1.setLocationRelativeTo(null);
                 inicio1.setVisible(true);
                 intro.dispose();
@@ -33,6 +35,7 @@ public class index {
         
         
         //Iniciar programa\\
+        
         intro.setLocationRelativeTo(null);
         intro.setVisible(true);
         tiempo.schedule(iniciar, 10000);

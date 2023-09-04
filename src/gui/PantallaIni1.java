@@ -17,6 +17,8 @@ public class PantallaIni1 extends javax.swing.JFrame {
     
         public PantallaIni1() {
         initComponents();
+        this.setExtendedState(MAXIMIZED_BOTH);
+        
         }
         
     
@@ -128,6 +130,7 @@ public class PantallaIni1 extends javax.swing.JFrame {
 
     private void BntLogMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BntLogMouseClicked
         Login login = new Login();
+        login.setExtendedState(MAXIMIZED_BOTH);
         login.setVisible(true);
         this.dispose();
         
@@ -136,6 +139,7 @@ public class PantallaIni1 extends javax.swing.JFrame {
     private void BtnRegMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnRegMouseClicked
         Register register = new Register();
         register.setVisible(true);
+        register.setExtendedState(MAXIMIZED_BOTH);
         register.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_BtnRegMouseClicked

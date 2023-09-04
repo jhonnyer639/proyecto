@@ -13,12 +13,13 @@ import javax.swing.ImageIcon;
  * @author kakar
  */
 public class Prinsipal extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form Prinsipal
      */
     public Prinsipal() {
         initComponents();
+        
         ImageIcon image = new ImageIcon(getClass().getResource("/resourses/wireframe 1.jpg"));
         Icon Fondo1 = new ImageIcon(image.getImage().getScaledInstance(volquete.getWidth(), volquete.getHeight(),Image.SCALE_DEFAULT));
         volquete.setIcon(Fondo1);
@@ -47,13 +48,13 @@ public class Prinsipal extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(volquete, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 458, Short.MAX_VALUE))
+                .addGap(0, 1580, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(volquete, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 453, Short.MAX_VALUE))
+                .addGap(0, 937, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
