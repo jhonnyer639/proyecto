@@ -25,7 +25,6 @@ public class index {
         TimerTask iniciar = new TimerTask(){
             @Override
             public void run (){
-                inicio1.setExtendedState(MAXIMIZED_BOTH);
                 inicio1.setLocationRelativeTo(null);
                 inicio1.setVisible(true);
                 intro.dispose();
