@@ -4,47 +4,49 @@ import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
-
 // @author kakar
-
 public class Prinsipal extends javax.swing.JFrame {
+
     PantallaIni1 inicio1 = new PantallaIni1();
-    
+    ARL arl = new ARL();
+    EPS eps = new EPS();
+    Pension pension = new Pension();
+
     public Prinsipal() {
         initComponents();
-        
+
         ImageIcon image = new ImageIcon(getClass().getResource("/resourses/wireframe 1.jpg"));
-        Icon Fondo1 = new ImageIcon(image.getImage().getScaledInstance(volquete.getWidth(), volquete.getHeight(),Image.SCALE_DEFAULT));
+        Icon Fondo1 = new ImageIcon(image.getImage().getScaledInstance(volquete.getWidth(), volquete.getHeight(), Image.SCALE_DEFAULT));
         volquete.setIcon(Fondo1);
         ImageIcon image2 = new ImageIcon(getClass().getResource("/resourses/persona.png"));
-        Icon Fondo2 = new ImageIcon(image2.getImage().getScaledInstance(IconPer2.getWidth(), IconPer2.getHeight(),Image.SCALE_DEFAULT));
+        Icon Fondo2 = new ImageIcon(image2.getImage().getScaledInstance(IconPer2.getWidth(), IconPer2.getHeight(), Image.SCALE_DEFAULT));
         IconPer2.setIcon(Fondo2);
         ImageIcon image3 = new ImageIcon(getClass().getResource("/resourses/qr.png"));
-        Icon Fondo3 = new ImageIcon(image3.getImage().getScaledInstance(IconCodQR.getWidth(), IconCodQR.getHeight(),Image.SCALE_DEFAULT));
+        Icon Fondo3 = new ImageIcon(image3.getImage().getScaledInstance(IconCodQR.getWidth(), IconCodQR.getHeight(), Image.SCALE_DEFAULT));
         IconCodQR.setIcon(Fondo3);
         ImageIcon image4 = new ImageIcon(getClass().getResource("/resourses/eps.png"));
-        Icon Fondo4 = new ImageIcon(image4.getImage().getScaledInstance(IcoEps1.getWidth(), IcoEps1.getHeight(),Image.SCALE_DEFAULT));
+        Icon Fondo4 = new ImageIcon(image4.getImage().getScaledInstance(IcoEps1.getWidth(), IcoEps1.getHeight(), Image.SCALE_DEFAULT));
         IcoEps1.setIcon(Fondo4);
         ImageIcon image5 = new ImageIcon(getClass().getResource("/resourses/arl.png"));
-        Icon Fondo5 = new ImageIcon(image5.getImage().getScaledInstance(IcoArl.getWidth(), IcoArl.getHeight(),Image.SCALE_DEFAULT));
+        Icon Fondo5 = new ImageIcon(image5.getImage().getScaledInstance(IcoArl.getWidth(), IcoArl.getHeight(), Image.SCALE_DEFAULT));
         IcoArl.setIcon(Fondo5);
         ImageIcon image6 = new ImageIcon(getClass().getResource("/resourses/agregarD.png"));
-        Icon Fondo6 = new ImageIcon(image6.getImage().getScaledInstance(IcoMDat.getWidth(), IcoMDat.getHeight(),Image.SCALE_DEFAULT));
+        Icon Fondo6 = new ImageIcon(image6.getImage().getScaledInstance(IcoMDat.getWidth(), IcoMDat.getHeight(), Image.SCALE_DEFAULT));
         IcoMDat.setIcon(Fondo6);
         ImageIcon image7 = new ImageIcon(getClass().getResource("/resourses/modificar.png"));
-        Icon Fondo7 = new ImageIcon(image7.getImage().getScaledInstance(IconMod.getWidth(), IconMod.getHeight(),Image.SCALE_DEFAULT));
+        Icon Fondo7 = new ImageIcon(image7.getImage().getScaledInstance(IconMod.getWidth(), IconMod.getHeight(), Image.SCALE_DEFAULT));
         IconMod.setIcon(Fondo7);
         ImageIcon image8 = new ImageIcon(getClass().getResource("/resourses/pension.png"));
-        Icon Fondo8 = new ImageIcon(image8.getImage().getScaledInstance(IcoPen.getWidth(), IcoPen.getHeight(),Image.SCALE_DEFAULT));
+        Icon Fondo8 = new ImageIcon(image8.getImage().getScaledInstance(IcoPen.getWidth(), IcoPen.getHeight(), Image.SCALE_DEFAULT));
         IcoPen.setIcon(Fondo8);
         ImageIcon image9 = new ImageIcon(getClass().getResource("/resourses/conpensacion.jpg"));
-        Icon Fondo9 = new ImageIcon(image9.getImage().getScaledInstance(IcoCaja.getWidth(), IcoCaja.getHeight(),Image.SCALE_DEFAULT));
+        Icon Fondo9 = new ImageIcon(image9.getImage().getScaledInstance(IcoCaja.getWidth(), IcoCaja.getHeight(), Image.SCALE_DEFAULT));
         IcoCaja.setIcon(Fondo9);
         ImageIcon image10 = new ImageIcon(getClass().getResource("/resourses/nomina.png"));
-        Icon Fondo10 = new ImageIcon(image10.getImage().getScaledInstance(IcoNomi.getWidth(), IcoNomi.getHeight(),Image.SCALE_DEFAULT));
+        Icon Fondo10 = new ImageIcon(image10.getImage().getScaledInstance(IcoNomi.getWidth(), IcoNomi.getHeight(), Image.SCALE_DEFAULT));
         IcoNomi.setIcon(Fondo10);
         ImageIcon image11 = new ImageIcon(getClass().getResource("/resourses/salir.png"));
-        Icon Fondo11 = new ImageIcon(image11.getImage().getScaledInstance(BtnCer.getWidth(), BtnCer.getHeight(),Image.SCALE_DEFAULT));
+        Icon Fondo11 = new ImageIcon(image11.getImage().getScaledInstance(BtnCer.getWidth(), BtnCer.getHeight(), Image.SCALE_DEFAULT));
         BtnCer.setIcon(Fondo11);
     }
 
@@ -178,17 +180,47 @@ public class Prinsipal extends javax.swing.JFrame {
         jLabel1.setText("PAGINA PRINCIPAL");
 
         IcoPen.setBorder(new javax.swing.border.MatteBorder(null));
+        IcoPen.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                IcoPenMouseClicked(evt);
+            }
+        });
 
         IcoEps1.setBackground(new java.awt.Color(0, 0, 0));
         IcoEps1.setBorder(new javax.swing.border.MatteBorder(null));
+        IcoEps1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                IcoEps1MouseClicked(evt);
+            }
+        });
 
         IcoMDat.setBorder(new javax.swing.border.MatteBorder(null));
+        IcoMDat.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                IcoMDatMouseClicked(evt);
+            }
+        });
 
         IcoNomi.setBorder(new javax.swing.border.MatteBorder(null));
+        IcoNomi.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                IcoNomiMouseClicked(evt);
+            }
+        });
 
         IcoCaja.setBorder(new javax.swing.border.MatteBorder(null));
+        IcoCaja.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                IcoCajaMouseClicked(evt);
+            }
+        });
 
         IcoArl.setBorder(new javax.swing.border.MatteBorder(null));
+        IcoArl.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                IcoArlMouseClicked(evt);
+            }
+        });
 
         BtnCer.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -284,6 +316,29 @@ public class Prinsipal extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_BtnCerMouseClicked
 
+    private void IcoEps1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IcoEps1MouseClicked
+
+    }//GEN-LAST:event_IcoEps1MouseClicked
+
+    private void IcoArlMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IcoArlMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IcoArlMouseClicked
+
+    private void IcoMDatMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IcoMDatMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IcoMDatMouseClicked
+
+    private void IcoPenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IcoPenMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IcoPenMouseClicked
+
+    private void IcoNomiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IcoNomiMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IcoNomiMouseClicked
+
+    private void IcoCajaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IcoCajaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IcoCajaMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
