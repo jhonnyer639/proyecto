@@ -28,8 +28,8 @@ public class index {
         TimerTask iniciar = new TimerTask() {
             @Override
             public void run() {
-                prinsipal.setLocationRelativeTo(null);
-                prinsipal.setVisible(true);
+                inicio1.setLocationRelativeTo(null);
+                inicio1.setVisible(true);
                 intro.dispose();
             }
         };
