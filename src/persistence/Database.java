@@ -18,20 +18,22 @@ public class Database {
     private static final String pass = "kakarotto639";
     private static final String url = "jdbc:mysql://localhost:3306/prueva";
 
-    public void conector() {
+    public Boolean conector() {
+        boolean conexion=false;
         con = null;
         try {
             Class.forName(driver);
 
             con = DriverManager.getConnection(url, user, pass);
             if (con != null) {
-                JOptionPane.showMessageDialog(null, "Conexion establecida");
+                //JOptionPane.showMessageDialog(null, "Conexion establecida");
+                conexion= true;
             } else {
             }
         } catch (ClassNotFoundException | SQLException ex) {
             JOptionPane.showMessageDialog(null, "Error de conexion" + ex);
         }
-
+        return conexion;
     }
 
     public void desconectar() {

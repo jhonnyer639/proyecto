@@ -38,7 +38,7 @@ public class index {
         intro.setLocationRelativeTo(null);
         intro.setVisible(true);
         tiempo.schedule(iniciar, 10000);
-        DB.conector();
+        
 
     }
 
