@@ -81,38 +81,32 @@ public class Prinsipal extends javax.swing.JFrame {
         BtnCer = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1280, 720));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 0));
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 0));
 
         jLabel2.setFont(new java.awt.Font("Stencil", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Crear");
         jLabel2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jLabel3.setFont(new java.awt.Font("Stencil", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("codigo");
         jLabel3.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jLabel4.setFont(new java.awt.Font("Stencil", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText(" Perfil");
         jLabel4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         jLabel5.setFont(new java.awt.Font("Stencil", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("modificar");
         jLabel5.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         jLabel6.setFont(new java.awt.Font("Stencil", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("QR");
         jLabel6.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -175,7 +169,6 @@ public class Prinsipal extends javax.swing.JFrame {
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel1.setFont(new java.awt.Font("Stencil", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("PAGINA PRINCIPAL");
 
