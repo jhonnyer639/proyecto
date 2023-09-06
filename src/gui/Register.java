@@ -126,6 +126,7 @@ public class Register extends javax.swing.JFrame {
         TextNombre.setBackground(new java.awt.Color(245, 255, 174));
         TextNombre.setForeground(new java.awt.Color(102, 98, 100));
         TextNombre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 98, 100)));
+        TextNombre.setDisabledTextColor(new java.awt.Color(153, 153, 153));
         TextNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TextNombreActionPerformed(evt);
@@ -135,26 +136,30 @@ public class Register extends javax.swing.JFrame {
         TextCedu.setBackground(new java.awt.Color(245, 255, 174));
         TextCedu.setForeground(new java.awt.Color(102, 98, 100));
         TextCedu.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        TextCedu.setDisabledTextColor(new java.awt.Color(153, 153, 153));
 
         TextPass.setBackground(new java.awt.Color(245, 255, 174));
         TextPass.setForeground(new java.awt.Color(102, 98, 100));
-        TextPass.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 98, 100)));
+        TextPass.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
 
         TextConPass.setBackground(new java.awt.Color(245, 255, 174));
         TextConPass.setForeground(new java.awt.Color(102, 98, 100));
-        TextConPass.setBorder(null);
+        TextConPass.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        TextConPass.setDisabledTextColor(new java.awt.Color(153, 153, 153));
 
-        jButton1.setBackground(new java.awt.Color(169, 162, 124));
+        jButton1.setBackground(new java.awt.Color(255, 255, 106));
         jButton1.setFont(new java.awt.Font("Stencil", 0, 24)); // NOI18N
         jButton1.setForeground(new java.awt.Color(30, 30, 30));
         jButton1.setText("REGISTER");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        SelCargo.setBackground(new java.awt.Color(255, 255, 51));
+        SelCargo.setBackground(new java.awt.Color(255, 255, 106));
+        SelCargo.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
         SelCargo.setForeground(new java.awt.Color(30, 30, 30));
         SelCargo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Piquero", "Administrador", "cochero", "conductor" }));
         SelCargo.addActionListener(new java.awt.event.ActionListener() {
@@ -163,10 +168,11 @@ public class Register extends javax.swing.JFrame {
             }
         });
 
-        BtnAtras.setBackground(new java.awt.Color(204, 204, 0));
+        BtnAtras.setBackground(new java.awt.Color(255, 255, 106));
         BtnAtras.setFont(new java.awt.Font("Stencil", 0, 12)); // NOI18N
         BtnAtras.setForeground(new java.awt.Color(30, 30, 30));
         BtnAtras.setText("Atrás");
+        BtnAtras.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         BtnAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnAtrasActionPerformed(evt);
@@ -179,9 +185,6 @@ public class Register extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(BtnAtras))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(47, 47, 47)
                         .addComponent(AvisPass, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -221,7 +224,10 @@ public class Register extends javax.swing.JFrame {
                                     .addComponent(jLabel8)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(SelCargo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(BtnAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 255, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -236,8 +242,8 @@ public class Register extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(BtnAtras)
-                .addGap(173, 173, 173)
+                .addComponent(BtnAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(159, 159, 159)
                 .addComponent(jLabel11)
                 .addGap(12, 12, 12)
                 .addComponent(TextNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -287,7 +293,7 @@ public class Register extends javax.swing.JFrame {
                     .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(51, 51, 51))
         );
