@@ -1,5 +1,6 @@
 package gui;
 import java.awt.Image;
+import java.sql.Connection;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
@@ -16,8 +17,8 @@ public class Intro extends javax.swing.JFrame {
     
     public Intro() {
         initComponents();
-        boolean conexion = baseD.conector();
-        if(conexion==true){
+        Connection conexion = baseD.conector();
+        if(conexion!=null){
             AlertCon.setText("conexion exitosa");
         }else{
             AlertCon.setText("error de conexion");

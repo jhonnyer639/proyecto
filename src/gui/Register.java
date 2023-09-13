@@ -24,21 +24,11 @@ public class Register extends javax.swing.JFrame {
     
     Database data = new Database();
     Prinsipal prinsipal =new Prinsipal();
-    private static final String driver = "com.mysql.cj.jdbc.Driver";
-    private static final String user = "kakarotto639";
-    private static final String pass = "kakarotto639";
-    private static final String url = "jdbc:mysql://localhost:3306/prueva";
+    
 
     public Register() {
         initComponents();
         this.setExtendedState(MAXIMIZED_BOTH);
-        
-        
-        try {
-            Class.forName(driver);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
-        }
 
         
     }
@@ -318,7 +308,7 @@ public class Register extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(TextPass.getText().contentEquals(TextConPass.getText())){
             try {
-            Connection con = DriverManager.getConnection(url, user, pass);
+            Connection con = data.conector();
             Statement stmt = con.createStatement();
             stmt.execute("INSERT INTO usuarios VALUES('"+TextCedu.getText()+"','"+TextNombre.getText()+"','"+SelCargo.getItemAt(WIDTH)+"','"+TextPass.getText()+"','M','2000-05-05')");
         } catch (SQLException ex) {

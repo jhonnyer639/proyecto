@@ -12,6 +12,7 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import persistence.Database;
 
 /**
  *
@@ -20,22 +21,14 @@ import javax.swing.JOptionPane;
 public class Login extends javax.swing.JFrame {
 
     Prinsipal prinsipal = new Prinsipal();
+    Database Dbase = new Database();
     Connection con;
 
-    private static final String driver = "com.mysql.cj.jdbc.Driver";
-    private static final String user = "kakarotto639";
-    private static final String pass = "kakarotto639";
-    private static final String url = "jdbc:mysql://localhost:3306/prueva";
 
     public Login() {
         initComponents();
         IncorrectCC.setText("");
         InputPss.setText("");
-        try {
-            Class.forName(driver);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
-        }
         this.setLocationRelativeTo(this);
         setImageLabel(jLabel1, "C:/Users/kakar/Pictures/logo1.png");
     }
@@ -337,7 +330,7 @@ public class Login extends javax.swing.JFrame {
             if (InputCC.getText().equals(IncorrectCC.getText())) {
                 IncorrectCC.setText("debe llenar todos los campos");
             } else {
-                con = DriverManager.getConnection(url, user, pass);
+                con = Dbase.conector();
                 Statement stmt = con.createStatement();
                 //stmt.execute("delete from usuarios where Cedula="+InputCC.getText());//borrar datos
                 if (InputPss.getText().equals(IncorrectPass.getText())) {
@@ -346,7 +339,7 @@ public class Login extends javax.swing.JFrame {
                     ResultSet rs = stmt.executeQuery("select * from usuarios where Cedula=" + InputCC.getText());
                     
                     while (rs.next()) {
-                        if (rs.getString("contrasenia").equals(InputPss.getText())) {
+                        if (rs.getString("Contrasenia").equals(InputPss.getText())) {
                             
                             prinsipal.setLocationRelativeTo(null);
                             prinsipal.setVisible(true);

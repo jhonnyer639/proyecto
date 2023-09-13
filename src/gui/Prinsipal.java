@@ -15,9 +15,7 @@ public class Prinsipal extends javax.swing.JFrame {
     public Prinsipal() {
         initComponents();
 
-        ImageIcon image = new ImageIcon(getClass().getResource("/resourses/wireframe 1.jpg"));
-        Icon Fondo1 = new ImageIcon(image.getImage().getScaledInstance(volquete.getWidth(), volquete.getHeight(), Image.SCALE_DEFAULT));
-        volquete.setIcon(Fondo1);
+        
         ImageIcon image2 = new ImageIcon(getClass().getResource("/resourses/persona.png"));
         Icon Fondo2 = new ImageIcon(image2.getImage().getScaledInstance(IconPer2.getWidth(), IconPer2.getHeight(), Image.SCALE_DEFAULT));
         IconPer2.setIcon(Fondo2);
