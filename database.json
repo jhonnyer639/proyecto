@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "mineria-dcfb9",
+  "private_key_id": "1e538acfa4b6e55cb823b85764260bbaef393215",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDAXs2rPgk8LtC4\nAW1MpqufvIe6oOKmraK6fCOAgP3q4w5VjKxJkmfhLiw0MLuIwl6ME5sL/xFp1weP\nYOeNRC6o2ObL9bCxZ6QSiT1C7khmli78Itibmlo1PjIAFDNVkW1cm4PLmG6Ce2i6\n+whg5f6csrnO1I7ejQIFhpv1n7ESrbglfMAu3ii+gH+hLKeOXWMy7pZvhx1f5KcJ\n/M4IiihdbVIerl+Hc/FTaSXbNZKcpMy4UFTmKk2FHB7es1j4AF3x2KshkGZCqii8\n1gvWA86D8uq9srG/YXJ81+7BGSBibhxZzNlBUhhomfGwmYf9nh4SbFs2xZCHvXFw\nbp7aD9idAgMBAAECggEAD7/TO8lU7Tnx+ZaYUbW1iFrhi9x/IeFGWNkv+OXWpAPZ\n2RQuyMk1OwDSOqWgvOYY4oP6ZiWIUe96XXk0C+NApK85Wgpv4F5ZVvEodFHY2JlE\nGH1r2XVuHDzO0CXXPBKvbu0GgcUliwY6gVBrE6/QxBh30OCjH8JQn44xN49O6nXt\nLW/5vwQio4/x5qXBF0rOzS7Fga/ksTnZ51nOZ+mcydWFcY51mEapmbojBZIuF21t\nH3mldsxnDxcYFCnB/9KUr3BxOwkN6hw6FXmYoG+wNd7iPwJqrjM32xAJ8jtTMGPA\njUIafQaIUINq9Z2G9Vxf4KZe9e+IVjYMc+D2vQXpqwKBgQDhxjA6XObaGSd2jftO\nh1QM0AUjbhjNmJ8K5w25xRd3kUg9HyPQc6h9G0GSyVYrUi/v2fDFAN8w+EmFAHN6\nYIpGWKLhsJmU5kByPx1qSlgtGb4mfOh0jjGZu818XyZAAv6puY5/fekTj2UpMN61\n7k4fepuTVPVVOpJMHhh7ORldzwKBgQDaH8lgfFoivb+kcgmLXJbfDvuMCFqcu4ha\nZzlUvHIDV5fK+A4YJLJKqtHS4AD2FqPhekKaicOLRETXBeHeX4PPH2UJqbpkhYKi\nG7xMzp6ZHDEuwHvpC8kMSzJVdMIeSwRumAF7XtTzn0W/Bsem0GNUl9n1ylz4QQ4a\n5mQ7iIDJ0wKBgFm5hp8bHo9cYceGw3HA7FEvNmuPLIJAfiw6CMVkI2BcN2Y7AuOr\nozEc7OFl7D3JKs3aQgo4v3pZofYeaMYgqbMtNIYWxeJb4w7EMG92XjaGPYBUMZlo\njSO4dABSXAQibIyM9qmKI1+npB9LkaahryBpfHx/zgPyBAQGDdqipYcXAoGALTHG\n3NoHJwmfyqfiOGDv1bnZ/vLAK5djsi+PHnKJQQ4GIoTxDqmT04q/PO0y5cpdHFvj\nrvd6b8GubcsHOLcbrW+41J65Qxiyr3oFsvhgviKsQh6ZzfimKIjwHeq6SeKLQYr3\nS6OjhfLrVaBG/9ZPrnhkLdxHFR0Nmh9Ah2FKJgcCgYEA3hNA0dKf7mCVBiACeKbZ\nVsvsuqXrFoxXkv7mML8CGCgxJrKXZksjlL3cvWst3CxF4vB6Q1imoUOqNaWuq5pC\nKheKdq7sCBivMalzXDRE5vEhxvRVqYKoBvOvRSeFmpx+cEWC6sYy22nzqd+GvRHh\n/hKij8akS23SV2uiP+DrFIA=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-qdrxd@mineria-dcfb9.iam.gserviceaccount.com",
+  "client_id": "117693850961932992695",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-qdrxd%40mineria-dcfb9.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -307,13 +307,13 @@ public class Register extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         if(TextPass.getText().contentEquals(TextConPass.getText())){
-            try {
+           /* try {
             Connection con = data.conector();
             Statement stmt = con.createStatement();
             stmt.execute("INSERT INTO usuarios VALUES('"+TextCedu.getText()+"','"+TextNombre.getText()+"','"+SelCargo.getItemAt(WIDTH)+"','"+TextPass.getText()+"','M','2000-05-05')");
         } catch (SQLException ex) {
             Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }*/
             prinsipal.setExtendedState(MAXIMIZED_BOTH);
             prinsipal.setLocationRelativeTo(null);
             prinsipal.setVisible(true);

@@ -1,5 +1,7 @@
 package persistence;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.sql.Connection;
 import javax.swing.JOptionPane;
 import java.sql.DriverManager;
@@ -14,25 +16,20 @@ public class Database {
     private static Connection con;
 
     private static final String driver = "com.mysql.cj.jdbc.Driver";
-    private static final String user = "sql10644645";
-    private static final String pass = "WlbT5fbkFD";
-    private static final String url = "jdbc:mysql://sql10.freemysqlhosting.net/sql10644645";
+    private static final String user = "kakarotto639";
+    private static final String pass = "K@k@rotto639";
+    private static final String url = "jdbc:mysql://https://databases-auth.000webhost.com/id21226515_mineria";
 
-    public Connection conector() {
-        boolean conexion=false;
-        con = null;
-        try {
-            Class.forName(driver);
+    public Connection conector() throws FileNotFoundException {
+        FileInputStream serviceAccount
+                = new FileInputStream("path/to/serviceAccountKey.json");
 
-            con = DriverManager.getConnection(url,user, pass);
-            if (con != null) {
-                //JOptionPane.showMessageDialog(null, "Conexion establecida");
-                conexion= true;
-            } else {
-            }
-        } catch (ClassNotFoundException | SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error de conexion" + ex);
-        }
+        FirebaseOptions options = new FirebaseOptions.Builder()
+                .setCredentials(GoogleCredentials.fromStream(serviceAccount))
+                .setDatabaseUrl("https://mineria-dcfb9-default-rtdb.firebaseio.com")
+                .build();
+
+        FirebaseApp.initializeApp(options);
         return con;
     }
 

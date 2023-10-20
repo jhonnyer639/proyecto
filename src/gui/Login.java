@@ -24,7 +24,6 @@ public class Login extends javax.swing.JFrame {
     Database Dbase = new Database();
     Connection con;
 
-
     public Login() {
         initComponents();
         IncorrectCC.setText("");
@@ -323,43 +322,43 @@ public class Login extends javax.swing.JFrame {
     private void BtnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnLoginActionPerformed
         try {
             // TODO add your handling code here:
-            
-            boolean t=false;
+
+            boolean t = false;
             IncorrectCC.setText("");
             IncorrectPass.setText("");
             if (InputCC.getText().equals(IncorrectCC.getText())) {
                 IncorrectCC.setText("debe llenar todos los campos");
             } else {
-                con = Dbase.conector();
+                //con = Dbase.conector();
                 Statement stmt = con.createStatement();
                 //stmt.execute("delete from usuarios where Cedula="+InputCC.getText());//borrar datos
                 if (InputPss.getText().equals(IncorrectPass.getText())) {
-                    IncorrectPass.setText("debe llenar todos los campos");
+                  //  IncorrectPass.setText("debe llenar todos los campos");
                 } else {
                     ResultSet rs = stmt.executeQuery("select * from usuarios where Cedula=" + InputCC.getText());
-                    
+
                     while (rs.next()) {
                         if (rs.getString("Contrasenia").equals(InputPss.getText())) {
-                            
+
                             prinsipal.setLocationRelativeTo(null);
                             prinsipal.setVisible(true);
                             this.dispose();
-                            t=true;
+                            t = true;
                         } else {
                             IncorrectPass.setText("la contraseña no es correcta");
                             InputPss.setText("");
-                            t=true;
+                            t = true;
                         }
                     }
-                    if(t==false){
-                    IncorrectCC.setText("el usuario no esta registrado");
-                    InputCC.setText("");
-                    InputPss.setText("");
-                    
+                    if (t == false) {
+                        IncorrectCC.setText("el usuario no esta registrado");
+                        InputCC.setText("");
+                        InputPss.setText("");
+
                     }
                     rs.close();
                     stmt.close();
-                    
+
                 }
             }
         } catch (SQLException ex) {
