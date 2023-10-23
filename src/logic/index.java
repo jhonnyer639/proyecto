@@ -2,7 +2,6 @@ package logic;
 
 import persistence.Database;
 import gui.*;
-import static java.awt.Frame.MAXIMIZED_BOTH;
 import java.util.Timer;
 import java.util.TimerTask;
 //@author kakar
@@ -21,9 +20,9 @@ public class index {
         Timer tiempo = new Timer();
         
         
-        PantInicio.setVisible(true);
+        
 
-      /*  //TimerTask intro\\
+        //TimerTask intro\\
         TimerTask iniciar = new TimerTask() {
             @Override
             public void run() {
@@ -35,7 +34,7 @@ public class index {
         //Iniciar programa\\
         PantCarga.setVisible(true);
         tiempo.schedule(iniciar, 9500);
-        */
+        
 
     }
 

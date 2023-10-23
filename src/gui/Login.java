@@ -62,12 +62,13 @@ public class Login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(207, 254, 178));
+        jPanel2.setBackground(new java.awt.Color(245, 255, 174));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/logo 1.png"))); // NOI18N
         jLabel1.setToolTipText("");
 
         jLabel2.setFont(new java.awt.Font("Stencil", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("LOGIN");
 
@@ -82,9 +83,11 @@ public class Login extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Stencil", 0, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Cedula de Ciudadania");
 
         jLabel4.setFont(new java.awt.Font("Stencil", 0, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Contraseña");
 
         InputPss.setBackground(new java.awt.Color(207, 254, 178));
@@ -99,7 +102,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/logo cedula (2).png"))); // NOI18N
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/candado (2).png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/candado.png"))); // NOI18N
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
@@ -108,6 +111,7 @@ public class Login extends javax.swing.JFrame {
         BtnQR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/qr (2).png"))); // NOI18N
 
         jLabel8.setFont(new java.awt.Font("Stencil", 0, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Codigo");
 
         jLabel9.setFont(new java.awt.Font("Stencil", 0, 12)); // NOI18N
@@ -308,9 +312,8 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_CheckRecoUsuarioActionPerformed
 
     private void BtnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAtrasActionPerformed
-        PantallaIni1 inicio1 = new PantallaIni1();
+        PantInicio inicio1 = new PantInicio();
         inicio1.setVisible(true);
-        inicio1.setExtendedState(MAXIMIZED_BOTH);
         inicio1.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_BtnAtrasActionPerformed

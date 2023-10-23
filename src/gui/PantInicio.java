@@ -1,5 +1,7 @@
 package gui;
 
+import gui.Register;
+import gui.PantLogin;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -13,7 +15,9 @@ public class PantInicio extends JFrame {
     JLabel Register;
     ImageIcon Imagen1;
     ImageIcon Imagen2;
-    Login PLogin;
+    PantLogin PLogin;
+    ClickLog ClickLog;
+    ClickReg ClickReg;
 
     public PantInicio() {
 
@@ -46,20 +50,19 @@ public class PantInicio extends JFrame {
         LabelReg = new JLabel();
         Login = new JLabel();
         Register = new JLabel();
+        ClickLog = new ClickLog();
+        ClickReg = new ClickReg();
 
         Imagen1 = new ImageIcon(getClass().getResource("/resourses/logo 1_1.png"));
         LabeLog.setBounds(300, 180, 184, 184);
-        LabeLog.setIcon(new ImageIcon(Imagen1.getImage().getScaledInstance(LabeLog.getWidth(), LabeLog.getWidth(), Image.SCALE_DEFAULT)));
+        LabeLog.setIcon(new ImageIcon(Imagen1.getImage().getScaledInstance(LabeLog.getWidth(), LabeLog.getHeight(), Image.SCALE_DEFAULT)));
+        LabeLog.addMouseListener(ClickLog);
         Panel.add(LabeLog);
 
         Imagen2 = new ImageIcon(getClass().getResource("/resourses/logo 2_1.png"));
         LabelReg.setBounds(750, 180, 184, 184);
-        LabelReg.setIcon(new ImageIcon(Imagen2.getImage().getScaledInstance(LabelReg.getWidth(), LabelReg.getWidth(), Image.SCALE_DEFAULT)));
-        LabelReg.addMouseListener(new MouseAdapter() {
-            private void click(MouseAdapter evt) {
-                Register(evt);
-            }
-        });
+        LabelReg.setIcon(new ImageIcon(Imagen2.getImage().getScaledInstance(LabelReg.getWidth(), LabelReg.getHeight(), Image.SCALE_DEFAULT)));
+        LabelReg.addMouseListener(ClickReg);
         Panel.add(LabelReg);
 
         Login.setText("LOGIN");
@@ -77,9 +80,58 @@ public class PantInicio extends JFrame {
         Panel.add(Register);
     }
 
-    private void Register(MouseAdapter evt) {
+}
 
+class ClickLog implements MouseListener {
+
+    Login PLogin = new Login();
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
         PLogin.setVisible(true);
-        this.dispose();
+
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+    }
+}
+
+class ClickReg implements MouseListener {
+
+    Register Register = new Register();
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        Register.setVisible(true);
+
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
     }
 }
