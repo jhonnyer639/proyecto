@@ -84,7 +84,7 @@ public class PantInicio extends JFrame {
 
 class ClickLog implements MouseListener {
 
-    Login PLogin = new Login();
+    PantLogin PLogin = new PantLogin();
 
     @Override
     public void mouseClicked(MouseEvent e) {

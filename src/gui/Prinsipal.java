@@ -8,6 +8,7 @@ import javax.swing.ImageIcon;
 public class Prinsipal extends javax.swing.JFrame {
 
     PantallaIni1 inicio1 = new PantallaIni1();
+    PantInicio inicio = new PantInicio();
     ARL arl = new ARL();
     EPS eps = new EPS();
     Pension pension = new Pension();
@@ -302,8 +303,8 @@ public class Prinsipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnCerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCerMouseClicked
-        inicio1.setLocationRelativeTo(null);
-        inicio1.setVisible(true);
+        
+        inicio.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_BtnCerMouseClicked
 

@@ -72,7 +72,7 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("LOGIN");
 
-        InputCC.setBackground(new java.awt.Color(207, 254, 178));
+        InputCC.setBackground(new java.awt.Color(208, 254, 180));
         InputCC.setForeground(new java.awt.Color(150, 149, 149));
         InputCC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 98, 100)));
         InputCC.setDisabledTextColor(new java.awt.Color(150, 149, 149));
@@ -294,7 +294,7 @@ public class Login extends javax.swing.JFrame {
                 .addContainerGap(138, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
